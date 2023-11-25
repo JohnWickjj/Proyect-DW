@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <!--Head-->
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="keywords" content="HTML5, CSS3, JavaScript">
+        <meta name="author" content="Jhon Jairo Cueva Tumbaco">
+        <title>Inicio/Eventos Gino</title>
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+
+        <!--Style-->
+        <style>
+
+            form {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                margin-top: 50px;
+                margin-bottom: 55px;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                background-color: #f9f9f9;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            h2[class="titulo"]{
+                margin-top: 225px;
+                text-align: center;
+                font-weight: bold;
+                line-height: 2;
+                
+            }
+            h2[class="titulo"]::after{
+                content: '';
+                text-align: center;
+                display: block;
+                height: 2.8px;
+                width: 120px;
+                background: linear-gradient(to right, #1AAD83 0%, #06B0B9 50%, #00B5E2 100%);
+                margin: 0 auto;
+            }
+     
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            select {
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            
+            input[type="submit"]{
+                background-color: #2b79c7;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                padding: 10px 30px;
+                font-weight: bold;
+                cursor: pointer;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px auto; /* Centro los botones */
+            }
+            input[type="reset"] {
+                background-color: #bdc9d4;
+                color: #252424;
+                border: none;
+                border-radius: 5px;
+                padding: 10px 25px;
+                font-weight: bold;
+                cursor: pointer;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px auto; /* Centro los botones */
+            }
+        
+            input[type="submit"]:hover {
+                background-color: #003266;
+            }
+
+            input[type="reset"]:hover {
+                background-color: #a7acb1;
+                color: black;
+            }
+
+            label {
+                
+                font-weight: bold;
+            }
+        
+            input[type="checkbox"] {
+                margin-right: 5px;
+            }
+            .centrado {
+                text-align: center; /* Centro los botones de enviar y cancelar */
+                
+            }
+            .mensajeError{
+                color:rgb(255, 0, 0);
+                font-size: 15px;
+            }
+            #form1{
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+ 
+        </style>
+    </head>
+
+    <!--Body-->
+    <body>
+
+        <!--Header-->
+        <header>
+            <div><h1 id="nombre">Eventos Gino</h1>  </div>    
+        </header>
+
+        <!--Navegacion-->
+        <nav class="navegacion">
+            <ul class="nav">
+                <li class="menu"><a href="Inicio.html">Inicio</a>
+                    <ul>
+                        <li class="submenu"><a href="LogIn.html">Acceder a cuenta</a></li>
+                        <li class="submenu"><a href="Servicios.html">Cotizar Eventos</a></li>
+                        <li class="submenu"><a href="Locales.html">Buscar locaciones</a></li>
+                    </ul>
+                </li>
+                <li class="menu"><a href="Servicios.html">Servicios</a>
+                    <ul>
+                        <li class="submenu"><a href="Cotizar.html">Cotizar</a></li>
+                    </ul>
+                </li>
+                <li class="menu"><a href="Locales.html">Locaciones</a>
+                    <ul>
+                        <li class="submenu"><a href="LocacionesForm.html">Buscar locales</a></li>
+                    </ul>
+                </li>
+                <li class="menu"><a href="Blog.html">Blog</a>
+                    <ul>
+                        <li class="submenu"><a href="Suscribirse.html">Suscribirse</a></li>
+                    </ul>
+                </li>
+                <li class="menu"><a href="SobreNosotros.html">Sobre Nosotros</a>
+                    <ul>
+                        <li class="submenu"><a href="FormTrabajaConNosotros.html">Formulario para trabajar con nosotros</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+         
+
+        <!--Main-->
+        <main>
+            
+          <div>
+              <h2 class="titulo">Solicitar presupuesto</h2>  
+          </div>
+          
+                <div class="formulario01">
+                    <form id="form1" name="formCotizar">
+                        <div>
+                            <label for="nombres">Nombres:</label>
+                            <input type="text" id="nombres" name="nombres" placeholder="Nombres y apellidos"><br>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="correo">Correo Electrónico:</label>
+                            <input type="email" id="correo" name="correo" placeholder="Email" ><br>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono"><br>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="ciudad">Ciudad:</label>
+                            <select id="ciudad" name="ciudad">
+                                <option value="0">Seleccione..</option>
+                                <option value="1">Samborondón</option>
+                                <option value="2">Daule</option>
+                                <option value="3">Durán</option>
+                                <option value="4">Naranjal</option>
+                                <option value="5">Guayaquil</option>
+                                <option value="4">San Pablo</option>
+                                <option value="4">Salitre</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div>
+                            <label id="sexo">Sexo:</label><br>
+                            <div class="centrado">
+                                <input type="radio" id="masculino" name="sexo" value="Masculino">
+                                <label for="masculino" style="font-weight: normal">Masculino</label>
+                                <input type="radio" id="femenino" name="sexo" value="Femenino">
+                                <label for="femenino" style="font-weight: normal">Femenino</label>
+                                <input type="radio" id="otro" name="sexo" value="Otro">
+                                <label for="otro" style="font-weight: normal">Otro</label><br>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <label>¿Qué podemos ayudarte?</label><br>
+                            <br><input type="checkbox" id="encendiendo" name="ayuda[]" value="Encendiendo">
+                            <label for="encendiendo">Encendiendo</label><br>
+                            <input type="checkbox" id="sonido" name="ayuda[]" value="Sonido">
+                            <label for="sonido">Sonido</label><br>
+                            <input type="checkbox" id="video" name="ayuda[]" value="Video">
+                            <label for="video">Video</label><br>
+                            <input type="checkbox" id="puesta-en-escena" name="ayuda[]" value="Puesta en escena">
+                            <label for="puesta-en-escena">Puesta en escena</label><br>
+                            <input type="checkbox" id="animador" name="ayuda[]" value="Animador">
+                            <label for="animador">Animador</label><br>
+                            <input type="checkbox" id="otro-ayuda" name="ayuda[]" value="Otro">
+                            <label for="otro-ayuda">Otro</label><br>
+                        </div>
+                        <br>
+                        <div>
+                            <label>¿Qué tipo de evento?</label><br>
+                            <br><input type="checkbox" id="corporativo" name="tipo-evento[]" value="Corporativo">
+                            <label for="corporativo">Corporativo</label><br>
+                            <input type="checkbox" id="caridad" name="tipo-evento[]" value="Caridad">
+                            <label for="caridad">Caridad</label><br>
+                            <input type="checkbox" id="celebracion" name="tipo-evento[]" value="Celebracion">
+                            <label for="celebracion">Celebración</label><br>
+                            <input type="checkbox" id="fiesta-baile" name="tipo-evento[]" value="Fiesta de baile">
+                            <label for="fiesta-baile">Fiesta de baile</label><br>
+                            <input type="checkbox" id="instalacion-permanente" name="tipo-evento[]" value="Instalación permanente">
+                            <label for="instalacion-permanente">Instalación permanente</label><br>
+                        </div>
+                        <br>
+                        <div>
+                            
+                            <label for="fecha">¿Cuándo es tu evento?</label><br>
+                            <br><input type="date" name="fecha" id="fecha">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="comentario">Cuéntanos más sobre tu evento:</label><br>
+                            <br><textarea id="comentario" name="comentario" rows="4" cols="80" placeholder="Descripción del evento"></textarea><br>
+                        </div>
+                        <br>
+
+                        <div class="centrado">
+
+                            <input type="submit" name="btnCotizar" class="btn btn-primary" value="Enviar">
+                            <input type="reset" class="btn btn-primary" value="Cancelar">
+                        </div>
+
+                    </form>
+                            
+                </div>
+
+        </main>
+
+        
+
+    
+        <!--footer-->
+        <footer>
+            <div id="foot1" class = foot>
+                <img src="Imágenes/logo.jfif" alt="logo de Eventos Gino">
+                <h3>Eventos Gino</h3>
+                <h4>Creando Sueños,<br>Celebrando Elegancia</h4>
+            </div>
+
+            <div id="foot2" class = foot>
+                <h2>Información de la empresa</h2>
+                <h3>Horario de Operación: 08h00 a 17h00</h3>
+                <h3>Ciudad: Guayaquil</h3>
+                <h3>Domicilio: Av. Pedro Menéndez Gilbert Callejón 12 Ne</h3>
+                <h3>Telefono: 04-3842719</h3>
+                <h3>Correo: eventosgino@lavaquitap.com</h3>
+                <h3>Sitio web: <a href="HOME.html">Eventos Gino</a></h3>
+            </div>
+
+            <div id="foot3" class = foot>
+                <h2>Menú</h2>
+                <h3><a href="Inicio.html">Inicio</a></h3>
+                <h3><a href="Servicios.html">Servicios</a></h3>
+                <h3><a href="Locales.html">Locaciones</a></h3>
+                <h3><a href="Blog.html">Blog</a></h3>
+                <h3><a href="SobreNosotros.html">Sobre Nosotros</a></h3>
+            </div>
+            
+            <div id="foot4" class = foot>
+                <h2>Redes Sociales</h2>
+                <h3>Facebook: Eventos Gino</h3>
+                <h3>Instagram: @eventosgino</h3>
+                <h3>Twitter: @eventos_gino</h3>
+                <h3>Telegram: @EventosGino</h3>
+                <h3>Tiktok: eventosginogyq</h3>
+                <h3>LinkedIn: Eventos_Gino</h3>
+            </div>
+        </footer>
+    <!--PARA ENLAZAR EL DOCUMENTO JS EXTERNO-->
+ <script src="validacionesform1.js"></script>
+    </body>
+</html>

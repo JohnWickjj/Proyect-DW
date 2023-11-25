@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset = "UTF-8">
+  <meta name="keywords" content="HTML5, CSS3, JavaScript">
+  <meta name="author" content="DAVID ALFREDO BURGOS HOLGUÍN">
+  <title>FormularioTrabajaConNosotros/Eventos Gino</title>
+  <link rel="stylesheet" type="text/css" href="style.css"> 
+  
+ <style>
+
+.Registro-datos {
+  width: 400px;
+  background: #24303c;
+  padding: 30px;
+  margin: auto;
+  margin-top: 200px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+  min-height: auto;
+  
+}
+
+.Registro-datos h4{
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: block;
+  width: 100%;
+  background: #24303c;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: white;
+}
+
+
+.Registro-datos p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.Registro-datos a {
+  color: white;
+  text-decoration: none;
+}
+
+.Registro-datos a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.Registro-datos .botons {
+  width: 100%;
+  background: #4f6dff;
+  cursor: pointer; 
+  border: none;
+  padding: 12px;  
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+.Espacio-Contenido{
+  margin: auto; 
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  text-align: center;
+}
+  .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+ </style>
+  
+</head>
+<body>
+    <header>
+        <h1 id="nombre">Eventos Gino</h1>      
+  </header>
+
+  <!--Navegacion-->
+  <nav class="navegacion">
+    <ul class="nav">
+        <li class="menu"><a href="Inicio.html">Inicio</a>
+            <ul>
+                <li class="submenu"><a href="LogIn.html">Acceder a cuenta</a></li>
+                <li class="submenu"><a href="Servicios.html">Cotizar Eventos</a></li>
+                <li class="submenu"><a href="Locales.html">Buscar locaciones</a></li>
+            </ul>
+        </li>
+        <li class="menu"><a href="Servicios.html">Servicios</a>
+            <ul>
+                <li class="submenu"><a href="Cotizar.html">Cotizar</a></li>
+            </ul>
+        </li>
+        <li class="menu"><a href="Locales.html">Locaciones</a>
+            <ul>
+                <li class="submenu"><a href="LocacionesForm.html">Buscar locales</a></li>
+            </ul>
+        </li>
+        <li class="menu"><a href="Blog.html">Blog</a>
+            <ul>
+                <li class="submenu"><a href="Suscribirse.html">Suscribirse</a></li>
+            </ul>
+        </li>
+        <li class="menu"><a href="SobreNosotros.html">Sobre Nosotros</a>
+            <ul>
+                <li class="submenu"><a href="FormTrabajaConNosotros.html">Formulario para trabajar con nosotros</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<!--Contenido Principal-->
+<div class="Espacio-Contenido">
+  <div>
+    <section class="Registro-datos">
+      <h4>Ingrese sus datos personales</h4>
+
+      <!--Formulario de Registro TrabajaConNosotros-->
+      <form id="registroForm">
+        <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+        <span class="error-message" id="errorNombres"></span>
+
+        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
+        <span class="error-message" id="errorApellidos"></span>
+
+        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+        <span class="error-message" id="errorCorreo"></span>
+
+        <input class="controls" type="text" name="numeroCelular" id="celular" placeholder="Ingrese su Número de Celular">
+        <span class="error-message" id="errorCelular"></span>
+
+        <input class="controls" type="text" name="direccion" id="direccion" placeholder="Ingrese su Dirección">
+        <span class="error-message" id="errorDireccion"></span>
+
+        <select class="controls" name="sexo" id="sexo">
+          <option value="" disabled selected>Seleccione su sexo:</option>
+          <option value="masculino">Masculino</option>
+          <option value="femenino">Femenino</option>
+        </select>
+        <span class="error-message" id="errorSexo"></span>
+
+        <label for="hojaDeVida">Cargue su hoja de vida (PDF o Word):</label>
+          <input class="controls" type="file" name="hojaDeVida" id="hojaDeVida" accept=".pdf, .doc, .docx">
+          <span class="error-message" id="errorHojaDeVida"></span>
+
+        <label for="terminosYCondiciones">
+          <input type="checkbox" id="terminosYCondiciones" name="terminosYCondiciones"> Estoy de acuerdo con <a href="#">Términos y Condiciones</a>
+        </label>
+        <span class="error-message" id="errorTerminos"></span>
+
+        <input class="botons" type="button" value="Registrar" onclick="validarFormulario(event)">
+
+      </form>
+    </section>
+  </div>
+</div>
+    
+  <footer>
+    <div id="foot1" class = foot>
+        <img src="Imágenes/logo.jfif" alt="logo de Eventos Gino">
+        <h3>Eventos Gino</h3>
+        <h4>Creando Sueños,<br>Celebrando Elegancia</h4>
+    </div>
+
+    <div id="foot2" class = foot>
+        <h2>Información de la empresa</h2>
+        <h3>Horario de Operación: 08h00 a 17h00</h3>
+        <h3>Ciudad: Guayaquil</h3>
+        <h3>Domicilio: Av. Pedro Menéndez Gilbert Callejón 12 Ne</h3>
+        <h3>Telefono: 04-3842719</h3>
+        <h3>Correo: eventosgino@lavaquitap.com</h3>
+        <h3>Sitio web: <a href="HOME.html">Eventos Gino</a></h3>
+    </div>
+
+    <div id="foot3" class = foot>
+        <h2>Menú</h2>
+        <h3><a href="Inicio.html">Inicio</a></h3>
+        <h3><a href="Servicios.html">Servicios</a></h3>
+        <h3><a href="Locales.html">Locaciones</a></h3>
+        <h3><a href="Blog.html">Blog</a></h3>
+        <h3><a href="SobreNosotros.html">Sobre Nosotros</a></h3>
+    </div>
+    
+    <div id="foot4" class = foot>
+        <h2>Redes Sociales</h2>
+        <h3>Facebook: Eventos Gino</h3>
+        <h3>Instagram: @eventosgino</h3>
+        <h3>Twitter: @eventos_gino</h3>
+        <h3>Telegram: @EventosGino</h3>
+        <h3>Tiktok: eventosginogyq</h3>
+        <h3>LinkedIn: Eventos_Gino</h3>
+    </div>
+</footer>
+  
+  <script src="ValidacionesFormTrabajaConNosotros.js"></script>
+  
+
+</body>
+</html>

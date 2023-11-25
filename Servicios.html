@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="keywords" content="HTML5, CSS3, JavaScript">
+        <meta name="author" content="JHON JAIRO CUEVA TUMBACO">
+        <title>Servicios/Eventos Gino</title>
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+        
+        <style>
+            /*Los Selectores*/
+            main{
+                margin-top: 175px;
+                margin-bottom: 50px;
+                padding-left: 100px;
+                padding-right: 100px;
+                background-color: #fff;
+                justify-content: center;
+                text-align: center;
+            }
+            
+            
+            article h2{
+                margin-top: 75px;
+                margin-bottom: 25px;
+                
+                
+                border-radius: 5px;
+                color: rgb(0, 0, 0);
+                line-height: 2;
+                
+                max-width: 100%;
+                
+            }
+
+            div>h2{
+                text-align: center;
+                padding: 10px;
+                display: block;
+            }
+          
+            .categoria >h2{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 25px;
+                
+
+            }
+           
+            .categoria {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center; 
+            }
+                        
+            .lista-horizontal{
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: -15px;
+                margin-right: -15px;
+            }
+                
+
+            .lista-horizontal li{
+                width: 25%;
+                padding: 5px;
+                border: 1px solid #ccc;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 15px;
+                margin-bottom: 15px;
+            }
+
+            .lista-horizontal li img{
+                max-width: 100%;
+                width: 300px;
+                height: 225px;
+                border-radius: 10px;
+                object-fit: cover;
+                margin: 0 auto;
+            }
+            .lista-horizontal img{
+                width: 300px;
+                height: 225px;
+            }
+
+            .lista-horizontal li .texto{
+                padding-top: 10px;
+            }
+
+            .lista-horizontal li .texto h3{
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .lista-horizontal li .texto p{
+                font-size: 16px;
+            }
+        
+            .lista-horizontal{
+                gap: 15px;
+                justify-content: center;
+                text-align: center;    
+            }
+            
+
+            div ul{
+                list-style: none;
+            }
+
+            h3~p{
+                margin: 10px;
+                text-align: justify;
+            }
+            main h4, span{
+                
+                margin-top: 55px;
+                margin-left: 125px;
+                margin-right: 100px;
+                line-height: 35px;
+                text-align:start;
+                font-size: 22px ;
+                font-weight: bold;
+                color: #0f4e81;
+                
+           
+            }
+            #llamativo{
+                margin-top: 75px;
+                text-align: center;
+                
+                background: linear-gradient(to right, rgb(23, 149, 195) 0%, #527da0 50%, #51728d 100%);;
+                color: white;
+                
+                width: auto;
+                height: 275px;
+               
+              
+
+            }
+
+            p+p{
+                margin-top: 50px;
+                font-size: 19px;
+            }
+
+            .texto ul li{
+                border: 0;
+                text-align: justify;
+                list-style: circle;
+                width: 100%;
+                padding: 5px;
+                color:#0f4e81;
+                box-shadow: none;
+                line-height: 0.8;
+            }
+            div .lista-horizontal{
+                display: flex
+            }
+
+            h2::after{
+                content: '';
+                text-align: center;
+                display: block;
+                height: 2.2px;
+                width: 90px;
+                background: linear-gradient(to right, #1AAD83 0%, #06B0B9 50%, #00B5E2 100%);
+                margin: 0 auto;
+
+
+            }
+            .rio{
+                line-height: 3;
+                display: block;
+                padding-top: 15px;
+            }
+            .importante {
+                text-align: initial;
+            margin-top: 50px;
+            margin-left: 150px;
+    
+
+            }
+            .importante img{
+                width: 800px;
+                height: 425px;
+            }
+            .sub {
+            background-color: #0155af; 
+            color: white; 
+            font-size: 16px; 
+            font-weight: bold;
+            box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 10px 40px; 
+            border: none; 
+            border-radius: 5px;
+            cursor: pointer; 
+            letter-spacing: 1.5px;
+            }
+            .sub:hover {
+            background-color: #002a57; 
+            }
+            .h4{
+                text-align: start;
+                margin: 0% ;
+                padding: 0%;
+            }
+
+            .image-aside {
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-top: 30px;
+            }
+            aside {
+                border-top: 5px solid #ffdd02;
+                padding: 50px;
+                letter-spacing: 1.5px;
+                
+                text-align: center;
+            }
+           
+            
+
+                    
+        </style>
+    </head>
+
+    <!--Body-->
+    <body>
+        <!--Header-->
+        <header>
+            <h1 id="nombre">Eventos Gino</h1>      
+        </header>
+        <!--Navegacion-->
+        <nav class="navegacion">
+            <ul class="nav">
+                <li class="menu"><a href="Inicio.html">Inicio</a>
+                    <ul>
+                        <li class="submenu"><a href="LogIn.html">Acceder a cuenta</a></li>
+                        <li class="submenu"><a href="Servicios.html">Cotizar Eventos</a></li>
+                        <li class="submenu"><a href="Locales.html">Buscar locaciones</a></li>
+                    </ul>
+                </li>
+                <li class="menu"><a href="Servicios.html">Servicios</a>
+                    <ul>
+                        <li class="submenu"><a href="Cotizar.html">Cotizar</a></li>
+                    </ul>
+                </li>
+                <li class="menu"><a href="Locales.html">Locaciones</a>
+                    <ul>
+                        <li class="submenu"><a href="LocacionesForm.html">Buscar locales</a></li>
+                    </ul>
+                </li>
+                <li class="menu"><a href="Blog.html">Blog</a>
+                    <ul>
+                        <li class="submenu"><a href="Suscribirse.html">Suscribirse</a></li>
+                    </ul>
+                </li>
+                <li class="menu"><a href="SobreNosotros.html">Sobre Nosotros</a>
+                    <ul>
+                        <li class="submenu"><a href="FormTrabajaConNosotros.html">Formulario para trabajar con nosotros</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    
+    <main>
+        <section>
+            <div class="content">
+                <h4>En eventos Gino, nos apasiona organizar eventos que sean inolvidables. 
+                    Contamos con un equipo de profesionales con amplia experiencia en el sector, 
+                    que se encargará de cuidar todos los detalles para que su evento sea un éxito.</h4>
+                <article class="importante">
+                    <h2 style="text-align: center;">Aprovecha estos servicios</h2>
+                    <div class="image-aside">
+                        <img src="Imágenes/servicio.jpeg" alt="Eventos de Servicios">
+                        <aside>
+                            <div class="absid">
+                                <p style="line-height: 1.5;margin-bottom: 50px;">¡Adquiere todas nuestras novedades y mantente al día!</p>
+                                <a style="text-decoration: none;margin-top: 250px;margin-bottom: 150px;" href="Suscribirse.html" class="sub">
+                                    SUSCRÍBETE AHORA
+                                </a>
+                            </div>
+                        </aside>
+                    </div>
+                </article>
+            </div>
+            
+            <article id="eventos_tipos">
+            <div class="toma1">
+                <h2>Eventos</h2>
+                <ul class="lista-horizontal">
+                    <li>
+                        <img src="Imágenes/evento-corporativo.jpg" alt="Eventos corporativos">
+                        <div class="texto">
+                            <h3>Eventos corporativos</h3>
+                            <p>Para empresas de todos los tamaños.</p>
+                            <ul style="padding-left: 20px;">
+                                <li>Convenciones y ferias</li>
+                                <li>Presentaciones de productos</li>
+                                <li>Conferencias y charlas</li>
+                                <li>Talleres y congresos</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="Imágenes/evento-social.png" alt="Eventos sociales">
+                        <div class="texto">
+                            <h3>Eventos sociales</h3>
+                            <p>Para celebrar los momentos más importantes.</p>
+                            <ul style="padding-left: 20px;">
+                                <li>Ceremonias y Recepciones</li>
+                                <li>Fiestas de XV años</li>
+                                <li>Bautizos, Bodas, Comuniones</li>
+                                <li>Reuniones familiares</li>
+                                <li>Fiestas de Cumpleaños</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="Imágenes/evento-deportivo.png" alt="Eventos deportivos">
+                        <div class="texto">
+                            <h3>Eventos deportivos</h3>
+                            <p>Para aficionados de todas las edades.</p>
+                            <ul style="padding-left: 20px;">
+                                <li>Torneos</li>
+                                <li>Competencias</li>
+                                <li>Premiaciones</li>
+                                <li>Apertura y Cierre de temporada</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="Imágenes/evento-infantil.jpg" alt="Eventos infantiles">
+                        <div class="texto">
+                            <h3>Eventos infantiles</h3>
+                            <p>Para que la pasen de maravillas los pequeños desde los 4 a 12 años.</p>
+                            <ul style="padding-left: 20px;">
+                                <li>Fiestas de cumpleaños</li>
+                                <li>Fiestas de fin de curso</li>
+                                <li>Matinés y temáticas</li>
+                                <li>Fiestas del Día del Niño</li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+            </article>
+            <article id="alimentacion">
+            <div class="toma2">
+                <h2>Alimentacion</h2>
+                <ul class="lista-horizontal">
+                    <li>
+                        <img src="Imágenes/catering.jpg" alt="Catering">
+                        <div class="texto">
+                            <h3>Catering</h3>
+                            <p>Para empresas de todos los tamaños.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="Imágenes/mesas-decora.jpeg" alt="Decoraciónes de Mesas y banquetes">
+                        <div class="texto">
+                            <h3>Decoración de mesas y banquetes</h3>
+                            <p>Un toque de elegancia y sofisticación para tu evento.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="Imágenes/personal-servicio.jpg" alt="Contratación de personal">
+                        <div class="texto">
+                            <h3>Contratación de personal de servicio</h3>
+                            <p>No te preocupes por nada, nosotros nos encargamos de todo un equipo profesional a tu servicio.</p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            </article>
+
+
+            <article id="experiencias">
+            <div class="toma3">
+                <h2>Experiencias únicas</h2>
+                <ul class="lista-horizontal">
+                    <li>
+                        <img src="Imágenes/despedida-vip.jpeg" alt="Despedida de soltero/soltera">
+                        <div class="texto">
+                            <h3>Despedida de soltero/soltera</h3>
+                            <p>¡Celebra tu despedida de soltero/soltera con un show que no olvidarás!.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="Imágenes/artistas-vip.jpg" alt="Eventos con artistas">
+                        <div class="texto">
+                            <h3>Show con artirtas</h3>
+                            <p>Un día de diversión y risas con los mejores artistas.</p>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+            </div>
+            </article>
+
+            <article id="infraestructura">
+            <div class="toma4">
+                <h2>Infraestructura</h2>
+                <ul class="lista-horizontal">
+                    <li>
+                        <img src="Imágenes/salones-servicios.jpg" alt="Alquiler de espacios">
+                        <div class="texto">
+                            <h3>Alquiler de espacios para eventos</h3>
+                            <p>Un lugar perfecto para los eventos únicos en espacios exclusivos.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="Imágenes/iluminacion-servicio.jpg" alt="Iluminación y sonido">
+                        <div class="texto">
+                            <h3>Iluminación y sonido para eventos</h3>
+                            <p>Transformamos tu evento en un espectáculo y vive una experiencia audiovisual única.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="Imágenes/montaje-escenario-servicio.jpg" alt="Escenarios y tarimas">
+                        <div class="texto">
+                            <h3>Escenarios y tarimas</h3>
+                            <p>Un evento inolvidable en un escenario inolvidable.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="Imágenes/decoraciones-de-eventos.jpg" alt="Decoración y ambientación de espacios">
+                        <div class="texto">
+                            <h3>Decoración y ambientación de espacios para eventos</h3>
+                            <p>Decoramos con un toque de magia y encanto para tu evento.</p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            </article>
+
+            <article id="otros_servicios">
+            <div class="toma5">
+                <h2>Otros servicios</h2>
+                <ul class="lista-horizontal">
+                    <li>
+                        <img src="Imágenes/logistica-servicio.jpeg" alt="Logística y transporte">
+                        <div class="texto">
+                            <h3>Logística y transporte para eventos</h3>
+                            <p>Tu evento, en el lugar y el momento perfecto.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="Imágenes/seguridad-servicios.jpg" alt="Seguridad y vigilancia">
+                        <div class="texto">
+                            <h3>Seguridad y vigilancia para eventos</h3>
+                            <p>Tu evento, seguro y protegido.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="Imágenes/Fotografia.jpeg" alt="Fotografía">
+                        <div class="texto">
+                            <h3>Fotografía y grabación de eventos</h3>
+                            <p>Tu evento, enmarcado para ver y recordar.</p>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+            </div>
+            
+            </article>
+            <article id="llamativo">
+                <h2 style="color: white;font-style: italic; font-size: 25px; "> Aprovecha !!</h2>
+            <div class="rio" >
+                <span style="font-style: italic; font-size: 25px; color: white;">¡Contáctanos hoy mismo para cotizar y obtener grandes ofertas!</span>
+                    <p style="font-size: 18px;">No dudes en hacerlo!</p>
+                    <a style="text-decoration: none;" href="Cotizar.html" class="sub">
+                        COTIZA TU EVENTO
+                    </a>                         
+            </div>
+            </article>
+            
+        
+
+        </section>
+        <script>
+            // Obtener el elemento aside
+            const aside = document.querySelector('aside');
+             // Obtener el elemento de la sección de eventos
+            const eventosItems = document.querySelectorAll('.toma1 .lista-horizontal li');
+            const alimentacionItems = document.querySelectorAll('.toma2 .lista-horizontal li');
+            const experienciasItems = document.querySelectorAll('.toma3 .lista-horizontal li');
+            const infraestructuraItems = document.querySelectorAll('.toma4 .lista-horizontal li');
+            const otrosServiciosItems = document.querySelectorAll('.toma5 .lista-horizontal li');
+
+
+
+        
+            // Añadir evento al aside para cambiar el fondo al pasar el puntero
+            aside.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = 'yellow';
+            });
+            
+            aside.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '';
+            });
+
+            eventosItems.forEach(item => {
+                item.addEventListener('mouseover', function() {
+                    this.style.backgroundColor = 'lightblue';
+                });
+
+                item.addEventListener('mouseout', function() {
+                    this.style.backgroundColor = '';
+                });
+                
+            });
+
+            alimentacionItems.forEach(item => {
+                item.addEventListener('mouseover', function() {
+                    this.style.backgroundColor = '#CB9D62';  
+                });
+
+                item.addEventListener('mouseout', function() {
+                    this.style.backgroundColor = '';
+                });
+            });
+
+            experienciasItems.forEach(item => {
+                item.addEventListener('mouseover', function() {
+                    this.style.backgroundColor = '#FF6347';  
+                });
+
+                item.addEventListener('mouseout', function() {
+                    this.style.backgroundColor = '';
+                });
+            });
+
+            infraestructuraItems.forEach(item => {
+                item.addEventListener('mouseover', function() {
+                    this.style.backgroundColor = '#D1D1D1';  
+                });
+
+                item.addEventListener('mouseout', function() {
+                    this.style.backgroundColor = '';
+                });
+            });
+            
+            otrosServiciosItems.forEach(item => {
+                item.addEventListener('mouseover', function() {
+                    this.style.backgroundColor = '#BE94CA';  
+                });
+
+                item.addEventListener('mouseout', function() {
+                    this.style.backgroundColor = '';
+                });
+            });
+
+            
+        </script>
+        
+    </main>
+
+
+
+        <footer>
+            <div id="foot1" class = foot>
+                <img src="Imágenes/logo.jfif" alt="logo de Eventos Gino">
+                <h3>Eventos Gino</h3>
+                <h4>Creando Sueños,<br>Celebrando Elegancia</h4>
+            </div>
+
+            <div id="foot2" class = foot>
+                <h2>Información de la empresa</h2>
+                <h3>Horario de Operación: 08h00 a 17h00</h3>
+                <h3>Ciudad: Guayaquil</h3>
+                <h3>Domicilio: Av. Pedro Menéndez Gilbert Callejón 12 Ne</h3>
+                <h3>Telefono: 04-3842719</h3>
+                <h3>Correo: eventosgino@lavaquitap.com</h3>
+                <h3>Sitio web: <a href="HOME.html">Eventos Gino</a></h3>
+            </div>
+
+            <div id="foot3" class = foot>
+                <h2>Menú</h2>
+                <h3><a href="Inicio.html">Inicio</a></h3>
+                <h3><a href="Servicios.html">Servicios</a></h3>
+                <h3><a href="Locales.html">Locaciones</a></h3>
+                <h3><a href="Blog.html">Blog</a></h3>
+                <h3><a href="SobreNosotros.html">Sobre Nosotros</a></h3>
+            </div>
+            
+            <div id="foot4" class = foot>
+                <h2>Redes Sociales</h2>
+                <h3>Facebook: Eventos Gino</h3>
+                <h3>Instagram: @eventosgino</h3>
+                <h3>Twitter: @eventos_gino</h3>
+                <h3>Telegram: @EventosGino</h3>
+                <h3>Tiktok: eventosginogyq</h3>
+                <h3>LinkedIn: Eventos_Gino</h3>
+            </div>
+    </footer>
+    </body>
+</html>

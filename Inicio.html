@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <!--Head-->
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="keywords" content="HTML5, CSS3, JavaScript">
+        <meta name="author" content="JANIS ODETH LARA JAMA">
+        <title>Inicio/Eventos Gino</title>
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+
+        <!--Style-->
+        <style>
+
+            #grancontenedor{
+                width: 90%;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+            }
+
+            .aside{
+                border: 2px solid #9e9e9e;
+                border-radius: 20px;    
+                margin-bottom: 20px;
+                margin-top: 20px;
+                margin-left: 5px;
+                width: 24%;
+            }
+
+            #principal, .aside{
+                float: left;
+            }
+            
+            #principal{
+                width: 75%;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            .stopFloat{
+                clear: both;
+                margin: 0;
+            }
+        
+            .parrafo{
+               width: 100%;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+            }
+
+            .parrafo>h3{
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 30px;
+            }
+
+            div[class="parrafo"] h3~p{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                text-align: justify;
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 10px;
+                word-spacing: 4px;
+                line-height: 1.5;
+                padding-left: 40px;
+                padding-right: 40px;
+            }     
+            
+            div[id="div1"]:nth-child(1){
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 70px;
+                margin-top: 20px;
+                max-width: 100%;
+            }  
+
+            article[class*="tic"]{
+               width: 100%;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               margin-bottom: 70px;
+            }
+
+            .servicios{ 
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 30px 30px;
+                padding: 20px;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .locaciones{ 
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 30px 30px;
+                padding: 20px;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .articulo>h3{
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 26px;
+            }
+
+            .articulo>a{
+                border: 1px solid #0f4e82;
+                border-radius: 10px;
+                background-color: #0f4e82;
+                padding: 10px;
+            }
+
+            #art1 a[href="Servicios.html"]{
+                font-size: 25px;
+                text-decoration: underline;
+                font-family: Arial; 
+                color: white;
+            }
+
+            #art1 a[href="Servicios.html"]:hover{
+                color: rgb(118, 176, 252);
+            }
+
+            #art2 a[href="Locales.html"]{
+                font-size: 25px;
+                text-decoration: underline;
+                font-family: Arial; 
+                color: white;
+            }
+
+            #art2 a[href="Locales.html"]:hover{
+                color: rgb(118, 176, 252);
+            }
+
+            #div4{
+                margin-bottom: 50px;
+            }
+
+            #div4 a[href="Blog.html"]{
+                border: 1px solid #0f4e82;
+                border-radius: 10px;
+                background-color: #0f4e82;
+                padding: 10px;
+                font-size: 25px;
+                text-decoration: underline;
+                font-family: Arial; 
+                color: white;
+                margin-bottom: 40px;
+            }
+
+            #div4 a[href="Blog.html"]:hover{
+                color: rgb(118, 176, 252);
+            }
+
+            .portada{       
+                width: 80%;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                background-color: beige;
+                margin: 0 auto;
+                margin-top: 190px;
+            }
+
+
+            .banner{             /*Display:inline-block banner*/
+                display: inline-block;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            
+           .banner:nth-child(1){
+                text-align: center;
+                width: 20%;
+                height: 100%;
+            }
+
+            .banner:nth-child(2){
+                text-align: center;
+                width: 20%;
+                height: 100%;
+            }
+            
+            .banner:nth-child(3){
+                text-align: center;
+                width: 40%;
+                height: 100%;
+            }
+
+            .banner img{
+                height: 200px;
+                max-width: 100%;
+            }
+                       
+            article[class$="ticulo"] img{
+                max-width: 100%; 
+                max-height: 100%;
+                width: 200px; 
+                height: 200px;
+            }
+
+            .servicios .elemento{ /*Display:inline-block servicios*/
+                display: inline-block;
+                width: 30%;
+                text-align: center;
+                border: 2px solid #9e9e9e;
+                border-radius: 20px;
+            }
+
+            .locaciones .elemento{ /*Display:inline-block locaciones*/
+                display: inline-block;
+                width: 30%;
+                text-align: center;
+                border: 2px solid #9e9e9e;
+                border-radius: 20px;
+            }
+
+            .elemento{
+                margin: 10px;
+            }
+
+            .elemento div{
+                border: 1px #0f4e81;
+                border-radius: 0 0 20px 20px;
+                background-color: beige;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+                max-width: 100%;
+                max-height: 300px;
+            }
+
+            .elemento img+div h2{
+                font-size: 20px;
+            }
+
+            p[id="eslogan"]{
+                font-family: Rage, cursive; 
+                color: #3f5f7a;
+                text-align: center;
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 10px;
+                word-spacing: 2px;
+                line-height: 1;
+                padding-left: 50px;
+                padding-right: 50px;
+            }  
+
+            .informacion div{
+                background-color: beige;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+                max-width: 100%;
+                max-height: 300px;
+                border-radius: 20px 20px 0 0; 
+                vertical-align: middle;
+                padding: 25px;
+                margin-bottom: 10px;
+            }
+
+            .informacion div h3{
+                font-size: 23px;
+            }
+
+            .informacion p{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                text-align: justify;
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 10px;
+                word-spacing: 4px;
+                line-height: 1.5;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .informacion+a{
+                font-size: 20px;
+                text-decoration: underline;
+                font-family: Arial; 
+                color:#3f5f7a;
+                display: inline-block;
+                margin: 10px;
+            }
+
+            .informacion+a:hover{
+                color: blue;
+            }
+
+            .detalles img{
+                max-width: 100%; 
+                max-height: 100%;
+                width: 400px; 
+            }
+
+            .detalles{ /*Display:inline-block detalles*/
+                display: inline-block;
+                width: 45%;
+                vertical-align: middle;
+            }
+            
+            #first{
+               color: black; 
+               font-size: 25px; 
+               font-weight: bold;
+            }
+
+            #second{
+                color: #0f4e81;
+               font-size: 35px; 
+               font-weight: bold;
+            }
+
+            #third{
+                text-align: center; 
+                color: black; 
+                font-size: 25px;
+            }
+
+            #leermas{
+                font-family:Arial, Helvetica, sans-serif;
+                font-size: 25px;
+                color:#0f4e82;
+                background: none;
+                margin: 15px;
+            }
+
+            #mood{
+                font-size: 25px;
+                padding: 15px;
+                margin: 25px;
+                background-color: black;
+                color:white;
+                border-radius: 15px;
+                border: 1px solid white;
+            }
+ 
+        </style>
+    </head>
+
+    <!--Body-->
+    <body id="body">
+
+        <!--Header-->
+        <header>
+            <div><h1 id="nombre">Eventos Gino</h1>  </div>    
+        </header>
+
+        <!--Navegacion-->
+        <nav class="navegacion">
+            <ul class="nav">
+                <li class="menu"><a href="Inicio.html">Inicio</a>
+                    <ul>
+                        <li class="submenu"><a href="LogIn.html">Acceder a cuenta</a></li>
+                        <li class="submenu"><a href="Servicios.html">Cotizar Eventos</a></li>
+                        <li class="submenu"><a href="Locales.html">Buscar locaciones</a></li>
+                    </ul>
+                </li>
+                <li class="menu"><a href="Servicios.html">Servicios</a>
+                    <ul>
+                        <li class="submenu"><a href="Cotizar.html">Cotizar</a></li>
+                    </ul>
+                </li>
+                <li class="menu"><a href="Locales.html">Locaciones</a>
+                    <ul>
+                        <li class="submenu"><a href="LocacionesForm.html">Buscar locales</a></li>
+                    </ul>
+                </li>
+                <li class="menu"><a href="Blog.html">Blog</a>
+                    <ul>
+                        <li class="submenu"><a href="Suscribirse.html">Suscribirse</a></li>
+                    </ul>
+                </li>
+                <li class="menu"><a href="SobreNosotros.html">Sobre Nosotros</a>
+                    <ul>
+                        <li class="submenu"><a href="FormTrabajaConNosotros.html">Formulario para trabajar con nosotros</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    
+    <div id="grancontenedor">
+
+        <!--Seccion Portada-->
+        <section class="portada">                
+                <div class="banner"><h2 style="color: #0f4e82; font-size: 25px;">Bienvenidos a Eventos Gino</h2></div>
+                <div class="banner"><img src="Imágenes/logo.jfif" alt="Logo de Eventos Gino"></div>
+                <div class="banner"><img src="Imágenes/Home.jpeg" alt="Portada de página evento"></div>
+        </section>
+        <button id="mood" onclick="mood()">Modo oscuro</button>
+       
+
+        <!--Main-->
+        <main id="principal">
+
+
+            <!--Div1-->
+            <div id=div1 class = parrafo>             
+                <p id="eslogan">Creando Sueños, Celebrando Elegancia</p>
+                <h3>¿Quiénes somos?</h3>
+                <p><span style="color: #0f4e81;"><b>Eventos Gino</b></span> no solo somos una empresa dedicada a organizar eventos, nuestro propósito es 
+                    ayudar a nuestra clientela a cumplir sus sueños y celebrar sus metas de la mejor forma, 
+                    brindando un <span style="color: #0f4e81;"><b>servicio excepcional</b></span>, con el fin de ofrecer materializar 
+                    <span style="color: #0f4e81;"><b>historias únicas, experiencias</b></span> y <span style="color: #0f4e81;"><b>recuerdos magníficos.</b></span></p>
+            </div>
+
+            <!--Div2-->
+            <div id=div2 class = parrafo>
+                <h3><br>¿Por qué preferirnos?</h3>
+                <p>Desde el día que abrimos nuestras puertas por primera vez, Eventos Gino nos comprometimos a superar las expectativas
+                de quienes eligen, a desafiar lo convencional y a elevar a un nivel superior cada celebración. Dedicados a la calidad 
+                y la excelencia, han sido el pilar de nuestra existencia durante años, y continuará siéndolo en el futuro.</p>
+                <p style="display: none;">Creemos que cada evento es una oportunidad para escribir una historia inolvidable, un capítulo de la vida de nuestros
+                    clientes que merece ser recordado con cariño y admiración. Siendo meticulosos con los detalles, creatividad y un equipo
+                    apasionado, nos esforzamos por crear momentos mágicos que perduran en la memoria de quienes confían en nosotros.</p>
+                <p style="display: none;">La satisfacción de nuestros clientes es sin duda nuestro mayor logro, nuestra misión persiste en la búsqueda constante
+                    de la perfección y la elegancia. Nos enorgullece haber sido testigos de la alegría, las sonrisas y las lágrimas de
+                    felicidad que nuestros eventos han inspirado a lo largo de los años. Somos quienes somos, no solo por lo que hacemos, 
+                    sino por la pasión con la que lo hacemos. Y seguiremos esforzándonos para que nuestros clientes se sientan honrados 
+                    de haber elegido a Eventos Gino como su compañero en la realización de sus sueños.<br></p>
+            </div>
+            <button onclick="leermas()" id="leermas">Leer más</button>
+
+            <!--Div3-->
+            <div id=div3 class = parrafo>
+                <h2 style="color: #0f4e81; font-size: 35px; font-family:Arial, Helvetica, sans-serif;"><br>Si quieres planear tus eventos con nosotros</h2>
+            </div>
+
+            <!--Articule1-->
+            <article id=art1 class="articulo">
+                <h3><br>Te ofrecemos nuestros servicios</h3>
+                <div class="servicios">
+                    <div class="elemento"><img src="Imágenes/Sociales.jpg" alt="Imagen Evento Social"><div><h2>Eventos Sociales</h2></div></div>
+                    <div class="elemento"><img src="Imágenes/Fotografia.jpeg" alt="Imagen de Servicio Fotografía"><div><h2>Fotografía</h2></div></div>
+                    <div class="elemento"><img src="Imágenes/Banquetes.jpg" alt="Imagen Servicio de Banquete"><div><h2>Banquetes</h2></div></div>
+                    <div class="elemento"><img src="Imágenes/iluminacion-servicio.jpg" alt="Imagen Servicio de Banquete"><div><h2>Iluminación</h2></div></div>
+                    <div class="elemento"><img src="Imágenes/Corporativos.jpg" alt="Imagen Evento Corporativo"><div><h2>Eventos Corporativos</h2></div></div>
+                </div>           
+                <a href="Servicios.html" class="masInformacion"><b>Más Información</b></a>
+            </article>
+
+            <!--Articule2-->
+            <article id=art2 class = articulo>
+                <h3><br>Puedes ver las locaciones disponibles</h3>
+                <div class="locaciones"> 
+                    <div class="elemento"><img src="Imágenes/Finca.jfif" alt="Imagen Locación Finca"><div><h2>Fincas</h2></div></div>
+                    <div class="elemento"><img src="Imágenes/Salon.jpg" alt="Imagen Locación Salón"><div><h2>Salones</h2></div></div>
+                    <div class="elemento"><img src="Imágenes/Restaurante.jpg" alt="Imagen Locación Restaurante"><div><h2>Restaurantes</h2></div></div>
+                    <div class="elemento"><img src="Imágenes/Club.jpg" alt="Imagen Locación Club"><div><h2>Clubes</h2></div></div>
+                </div>
+                <a href="Locales.html" class="masInformacion"><b>Más Información</b></a>
+            </article>
+
+            <!--Div4-->
+            <div id=div4 class = parrafo>
+                <div class="detalles">
+                    <br><h4 id="first">Nuestros años de experiencia</h4>
+                    <br><h4 id="second">nos impulsan a superar tus<br>expectativas en cada evento</h4>
+
+                    <p id="third">Descubre cómo hacemos realidad sus sueños en Eventos Gino y 
+                        <br>la magia en cada detalle. Para nosotros es importante que conozcas 
+                        <br>nuestra historia y como trabajamos para brindar la mejor calidad.
+                    </p>
+                    
+                    <br><a href="Blog.html" class="masInformacion"><b>Más Información</b></a>
+                </div>
+                
+                <div class="detalles">
+                    <img src="Imágenes/grupo.jpg" alt="Imagen Grupo de trabajo">
+                </div>
+            </div>
+        </main>
+
+        <!--asides-->
+        <aside class="aside" id="primero">
+            <div class="informacion">
+                <div><h3>Ingresa a tu cuenta</h3></div>
+                <img src="Imágenes/LogIn.png" alt="Imagen de Ingreso a la cuenta" style="width: 100px;" id="imagenR1">
+                <p>Puedes ingresar a tu cuenta para navegar por nuestro sitio web y acceder a algunas servicios
+                    personalizados.</p>
+            </div>
+            <a href="LogIn.html"><b>Ingresar</b></a>
+        </aside>
+        
+        <aside class="aside" id="segundo">
+            <div class="informacion">
+                <div><h3>Cotiza tus eventos</h3></div>  
+                <img src="Imágenes/Cotizar.png" alt="Imagen de Ingreso a la cuenta" style="width: 100px;">          
+                <p>Para conocer el costo de tus eventos, especifica detalles de lo que necesitas y conoce qué paquete de servicios es el mejor para ti.</p>
+            </div>
+            <a href="Servicios.html"><b>Cotizar</b></a>
+        </aside>
+
+        <aside class="aside" id="tercero">
+            <div class="informacion">
+                <div><h3>Busca locaciones</h3></div> 
+                <img src="Imágenes/locaciones.png" alt="Imagen de Ingreso a la cuenta" style="width: 100px;">     
+                <p>Puedes encontrar el mejor lugar para tu evento en cualquier sector de Guayaquil.<br></p>
+            </div>
+            <a href="Locales.html"><b>Localizar</b></a>
+        </aside>
+
+        <aside class="aside" id="cuarto">
+            <div class="informacion">
+                <div><h3>¡Conéctate con nosotros!</h3></div>
+                <p>Valoramos tu participación y queremos mantenerte al tanto de todas nuestras novedades, 
+                    actualizaciones y eventos emocionantes. Síguenos en nuestras redes para obtener información 
+                    exclusiva, interactuar con nuestra comunidad y estar al día con lo que está sucediendo en 
+                    Eventos Gino. 
+               </p>
+                
+               <p><a href="https://www.facebook.com/tuperfil"><img src="Imágenes/facebook.png" alt="Facebook" width="32" height="32">
+                  </a>Eventos Gino</p>
+                <p><a href="https://www.instagram.com/"><img src="Imágenes/instagram.png" alt="Instagram" width="32" height="32">
+                  </a>@eventosgino</p>
+                <p><a href="https://twitter.com/iniciarsesion?lang=es"><img src="Imágenes/twitter.png" alt="Twitter" width="32" height="32">
+                  </a>@eventos_gino</p>
+                <p><a href="https://web.telegram.org/"><img src="Imágenes/telegram.png" alt="Telegram" width="32" height="32">
+                  </a>@EventosGino</p>
+                <p><a href="https://www.tiktok.com/es/"><img src="Imágenes/tiktok.png" alt="Tiktok" width="32" height="32">
+                  </a>eventosginogyq</p>
+                <p><a href="https://ec.linkedin.com/"><img src="Imágenes/linkedin.png" alt="LinkedIn" width="32" height="32">
+                  </a>Eventos_Gino</p>
+                
+            </div>
+           
+        </aside>
+
+        <div class="stopFloat"></div>
+
+    </div>
+        <!--footer-->
+        <footer>
+            <div id="foot1" class = foot>
+                <img src="Imágenes/logo.jfif" alt="logo de Eventos Gino">
+                <h3>Eventos Gino</h3>
+                <h4>Creando Sueños,<br>Celebrando Elegancia</h4>
+            </div>
+
+            <div id="foot2" class = foot>
+                <h2>Información de la empresa</h2>
+                <h3>Horario de Operación: 08h00 a 17h00</h3>
+                <h3>Ciudad: Guayaquil</h3>
+                <h3>Domicilio: Av. Pedro Menéndez Gilbert Callejón 12 Ne</h3>
+                <h3>Telefono: 04-3842719</h3>
+                <h3>Correo: eventosgino@lavaquitap.com</h3>
+                <h3>Sitio web: <a href="HOME.html">Eventos Gino</a></h3>
+            </div>
+
+            <div id="foot3" class = foot>
+                <h2>Menú</h2>
+                <h3><a href="Inicio.html">Inicio</a></h3>
+                <h3><a href="Servicios.html">Servicios</a></h3>
+                <h3><a href="Locales.html">Locaciones</a></h3>
+                <h3><a href="Blog.html">Blog</a></h3>
+                <h3><a href="SobreNosotros.html">Sobre Nosotros</a></h3>
+            </div>
+            
+            <div id="foot4" class = foot>
+                <h2>Redes Sociales</h2>
+                <h3>Facebook: Eventos Gino</h3>
+                <h3>Instagram: @eventosgino</h3>
+                <h3>Twitter: @eventos_gino</h3>
+                <h3>Telegram: @EventosGino</h3>
+                <h3>Tiktok: eventosginogyq</h3>
+                <h3>LinkedIn: Eventos_Gino</h3>
+            </div>
+        </footer>
+
+        <!--JAVASCRIPT-->
+        <script>
+            
+            /*Interactividad asides*/
+            var asides = document.querySelectorAll('.aside');
+            
+            for(var i=0; i<asides.length;i++){/*for arreglo asides*/
+                asides[i].addEventListener('mouseover',zoomin);
+                asides[i].addEventListener('mouseout',zoomout);
+            }
+            
+            function zoomin() {/*funcion zoomin*/
+                this.style.boxShadow= "0px 1px 10px rgba(0,0,0,0.5)";
+                this.style.transform = "translateY(-3%)";
+                var index = Array.from(asides).indexOf(this);
+                var img = document.createElement("img");
+
+                switch (index) {
+                    case 0:
+                        img.src = "Imágenes/refer1.png";
+                        img.style.border="2px solid #3f5f7a";
+                        break;
+                    case 1:
+                        img.src = "Imágenes/refer2.png";
+                        img.style.border="2px solid #3f5f7a";
+                        break;
+                    case 2:
+                        img.src = "Imágenes/refer3.png";
+                        img.style.border="2px solid #3f5f7a";
+                    break;
+                    default:
+                        break;
+                }
+                
+                img.style.width = "250px";
+                img.style.height = "150px";
+                img.style.position = "absolute";
+                img.style.borderRadius = "50%";
+                this.appendChild(img);
+            }
+
+            function zoomout() {/*funcion zoomout*/
+                this.style.boxShadow= "none";
+                this.style.transform = "none";
+                this.removeChild(this.lastChild);
+            }
+
+            /*Interactividad article-div*/
+            var divs = document.getElementsByClassName('elemento');
+            
+            for(var i=0; i<divs.length;i++){/*for arreglo divs*/
+                divs[i].addEventListener('mouseover',resaltarin);
+                divs[i].addEventListener('mouseout',resaltarout);
+                divs[i].addEventListener('click',irA);
+            }
+
+            function resaltarin() {
+                this.style.boxShadow= "0px 1px 10px rgba(0,0,0,0.5)";
+                this.style.transform = "translateY(-4%)";
+                var block = this.querySelector('div');
+                var h2s = this.querySelector('h2');
+                block.style.backgroundColor = "#0C1C29";
+                h2s.style.color = "white";
+                h2s.style.size = "30px";
+            }
+
+            function resaltarout() {
+                this.style.boxShadow= "none";
+                this.style.transform = "none";
+                var block = this.querySelector('div');
+                var h2s = this.querySelector('h2');
+                block.style.backgroundColor = "beige";
+                h2s.style.color = "black";
+                h2s.style.size = "20px";
+            }
+
+            function irA() {
+                var index = Array.from(divs).indexOf(this);
+
+                switch (index) {
+                    case 0:
+                        window.location.href = "Servicios.html#eventos_tipo";
+                    break;
+                    case 1:
+                        window.location.href = "Servicios.html#otros_servicios";
+                    break;
+                    case 2:
+                        window.location.href = "Servicios.html#alimentacion";
+                    break;
+                    case 3:
+                        window.location.href = "Servicios.html#infraestructura";
+                    break;
+                    case 4:
+                        window.location.href = "Servicios.html#eventos_tipo";
+                    break;
+                    case 5:
+                        window.location.href = "Locales.html#fincas";
+                    break;
+                    case 6:
+                        window.location.href = "Locales.html#locaciones";
+                    break;
+                    case 7:
+                        window.location.href = "Locales.html#restaurantes";
+                    break;
+                    case 8:
+                        window.location.href = "Locales.html#clubes";
+                    break;
+        
+                    default:
+                        break;
+                }
+            }
+
+            /*Interactividad parrafo leer mas*/
+            function leermas() {
+                var div = document.getElementById("div2");
+                var parrafos = div.getElementsByTagName("p");
+                var leermas = document.getElementById("leermas");
+
+                for (var i = 1; i < parrafos.length; i++) {
+                    if (parrafos[i].style.display === "none") {
+                        parrafos[i].style.display = "block";
+                        leermas.innerText = 'Ocultar';
+                    } else {
+                        parrafos[i].style.display = "none";
+                        leermas.innerText = 'Leer más';
+                    }
+                }
+            }
+
+            /*Interactividad con botones de más información*/
+            var enlaces = document.querySelectorAll('.masInformacion');
+            
+            for(var i=0; i<enlaces.length;i++){/*for arreglo enlaces*/
+                enlaces[i].addEventListener('mouseover',destacarin);
+                enlaces[i].addEventListener('mouseout',destacerout);
+            }
+
+            function destacarin() {/*funcion zoomin*/
+                this.style.boxShadow= "0px 1px 20px rgba(0,0,0,0.5)";
+                this.style.padding= "12px";
+                this.style.backgroundColor="#002849";
+            }
+
+            function destacerout() {/*funcion zoomin*/
+                this.style.boxShadow= "none";
+                this.style.padding= "10px";
+                this.style.backgroundColor="#0f4e82";
+            }
+
+            /*Interactividad con boton de modo oscuro*/
+            function mood() {
+                var contenedor = document.getElementById("grancontenedor");
+                var first = document.getElementById("first");
+                var second = document.getElementById("second");
+                var third = document.getElementById("third");
+                var h3 = document.querySelectorAll(".informacion h3");
+                var modo = document.getElementById("mood");
+
+                if(contenedor.style.backgroundColor==="white"){
+                    contenedor.style.backgroundColor="black";
+                    contenedor.style.color="white";
+                    first.style.color = "white";
+                    third.style.color = "white";
+                    modo.style.backgroundColor="white";
+                    modo.style.color = "black";
+                    modo.innerHTML="Modo claro";
+
+                    for(var i=0; i<h3.length; i++){
+                        h3[i].style.color = "black";
+                    }
+                }else{
+                    contenedor.style.backgroundColor="white";
+                    contenedor.style.color="black";
+                    first.style.color = "white";
+                    first.style.color = "white";
+                    third.style.color = "white";
+                    modo.style.backgroundColor="black";
+                    modo.style.color = "white";
+                    modo.innerHTML="Modo oscuro";
+                }
+            }
+
+        </script>
+    </body>
+</html>
+
